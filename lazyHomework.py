@@ -4,7 +4,7 @@ import time
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
-
+#I could os.makedir() but i'h allready created folder
 #These are the path hich you need to change or you may have to create new folder
 #start from line 10-19 & 44-50  please take care!!Important!!
 
