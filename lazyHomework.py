@@ -1,10 +1,12 @@
+import os
 import time
+# need to install using pip
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
-import os
 
 
 #These are the path hich you need to change or you may have to create new folder
+#start from line 10-19 & 44-50  please take care!!Important!!
 
 paths = {
         'math':'/home/kanishk/Desktop/Learn/ha', 
@@ -42,7 +44,6 @@ def homework(filename):
         os.chdir(paths['other'])
 def placer(file,hw,notes,key):
     if hw in file or 'Hw' in file:
-        
         os.chdir(f"{paths[key]}/homework")
     elif notes in file:
         os.chdir(f"{paths[key]}/Notes")
