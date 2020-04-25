@@ -1,3 +1,3 @@
 # LazyAct
-This was started to make you lazy and useless 
-Made in India , By kanishk
+This was started to make you lazy and useless <br>
+Made in India , By Kanishk Sappu
