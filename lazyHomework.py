@@ -5,7 +5,7 @@ from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
 #I could os.makedir() but i'h allready created folder
-#These are the path hich you need to change or you may have to create new folder
+#These are the path which you need to change or you may have to create new folder
 #start from line 10-19 & 44-50  please take care!!Important!!
 
 paths = {
@@ -26,15 +26,15 @@ def homework(filename):
         print('Error was: ',e)
         file = filename.replace('-',' ')
     if 'math' in file:
-        placer(file,'Key','Notes','math')
+        placer(file,'anwser','Key','Notes','math')
     elif 'phy' in file:
-        placer(file,'question*','notes',"phy")
+        placer(file,'anwser','question*','notes',"phy")
     elif 'Chem' in file:
-        placer(file,'HW','notes','chem')
+        placer(file,'anwser','HW','notes','chem')
     elif 'bio' in file:
-        placer(file,'hw','notes','bio')
+        placer(file,'anwser','hw','notes','bio')
     elif 'CS' in file:
-        placer(file,'Homework','Notes','cs')
+        placer(file,'anwser','Homework','Notes','cs')
     # Thes may be wrong becase i didn't have same name for file 
     elif 'comp' in file:
         placer(file,'Homework','N*',"comp")
@@ -42,9 +42,11 @@ def homework(filename):
         placer(file,'Homework','Notes','sst')
     else: 
         os.chdir(paths['other'])
-def placer(file,hw,notes,key):
-    if hw in file or 'Hw' in file:
+def placer(file,ans,hw,notes,key):
+    if hw in file :
         os.chdir(f"{paths[key]}/homework")
+    elif ans in file:
+        os.chdir(f"{paths[key]}/answer")
     elif notes in file:
         os.chdir(f"{paths[key]}/Notes")
     else:
