@@ -49,16 +49,12 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
 <?php  
 
     if(date("h") <= 18){
-        echo "Was actinaatr";
         echo "<style>
             body { 
                 background-color:#333;
                 color:#fff;
-            }
+                }
             </style>";
-    }
-    else{
-        echo "sorry";
     }
 ?>
 
