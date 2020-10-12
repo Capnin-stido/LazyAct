@@ -3,6 +3,7 @@ import time
 import random
 import time
 from datetime import datetime
+import os
 
 
 
@@ -31,8 +32,9 @@ f.write('----------------------------\n')
 f.close()
 
 #opening browser
-
-pyg.hotkey('ctrl','shift','t')
+browserLocation = "C:\Users\Vibhuti\Desktop\minecraft\Storage\Tor Browser\Browser"
+os.system("cd "+browserLocation+"&& firefox.exe");
+#pyg.hotkey('ctrl','shift','t')
 time.sleep(15)
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
